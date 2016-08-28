@@ -26,12 +26,12 @@ class CaculatorViewController: UIViewController {
         self.disposeBag = DisposeBag()
         
         // Do any additional setup after loading the view.
-//        Observable.combineLatest(num1.rx_text, num2.rx_text, num3.rx_text) { (text1, text2, text3) -> Int in
-//            return (Int(text1) ?? 0) + (Int(text2) ?? 0) + (Int(text3) ?? 0)
-//        }
-//        .map { $0.description }
-//        .bindTo(sum.rx_text)
-//        .addDisposableTo(self.disposeBag!)
+        Observable.combineLatest(num1.rx_text, num2.rx_text, num3.rx_text) { (text1, text2, text3) -> Int in
+            return (Int(text1) ?? 0) + (Int(text2) ?? 0) + (Int(text3) ?? 0)
+        }
+        .map { $0.description }
+        .bindTo(sum.rx_text)
+        .addDisposableTo(self.disposeBag!)
         
 //        Observable.zip(num1.rx_text, num2.rx_text, num3.rx_text) { (text1, text2, text3) -> Int in
 //            return (Int(text1) ?? 0) + (Int(text2) ?? 0) + (Int(text3) ?? 0)
@@ -41,14 +41,6 @@ class CaculatorViewController: UIViewController {
 //        }
 //        .bindTo(sum.rx_text)
 //        .addDisposableTo(self.disposeBag!)
-        
-        let source = Observable.range(start: 0, count: 3)
-        let result = source.startWith(-3, -2, -1)
-        result.subscribe { (event) in
-            if let num = event.element {
-                print(num)
-            }
-        }
     }
 
 }

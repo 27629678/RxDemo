@@ -20,6 +20,7 @@
 		3B8259B124CC3037B1EC01F3 /* Pods-RxDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxDemo/Pods-RxDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		5015636C7DA8AAB2E617BA4C /* Pods_RxDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F5DEE4F1A7017265FF93E8 /* Pods-RxDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxDemo/Pods-RxDemo.release.xcconfig"; sourceTree = "<group>"; };
+		DA292B991DB07AA300C3685C /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = RxDemo/MyPlayground.playground; sourceTree = "<group>"; };
 		DAAD61CF1D70604400CC8648 /* CaculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaculatorViewController.swift; sourceTree = "<group>"; };
 		DACB99A71D7055EA00C40373 /* RxDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACB99AA1D7055EA00C40373 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +54,7 @@
 		DACB999E1D7055EA00C40373 = {
 			isa = PBXGroup;
 			children = (
+				DA292B991DB07AA300C3685C /* MyPlayground.playground */,
 				DACB99A91D7055EA00C40373 /* RxDemo */,
 				DACB99A81D7055EA00C40373 /* Products */,
 				F8F37DF94606872D26AD491F /* Pods */,

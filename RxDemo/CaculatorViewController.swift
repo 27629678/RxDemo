@@ -26,11 +26,11 @@ class CaculatorViewController: UIViewController {
         self.disposeBag = DisposeBag()
         
         // Do any additional setup after loading the view.
-        Observable.combineLatest(num1.rx_text, num2.rx_text, num3.rx_text) { (text1, text2, text3) -> Int in
+        Observable.combineLatest(num1.rx.textInput.text, num2.rx.textInput.text, num3.rx.textInput.text) { (text1, text2, text3) -> Int in
             return (Int(text1) ?? 0) + (Int(text2) ?? 0) + (Int(text3) ?? 0)
         }
         .map { $0.description }
-        .bindTo(sum.rx_text)
+        .bindTo(sum.rx.textInput.text)
         .addDisposableTo(self.disposeBag!)
         
 //        Observable.zip(num1.rx_text, num2.rx_text, num3.rx_text) { (text1, text2, text3) -> Int in

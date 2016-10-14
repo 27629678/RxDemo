@@ -29,26 +29,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     // MARK: table view delegate and datasource
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return titles.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("RxDemos")
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCell(withIdentifier: "RxDemos")
         if cell == nil {
-            cell = UITableViewCell(style: .Default, reuseIdentifier: "RxDemos")
+            cell = UITableViewCell(style: .default, reuseIdentifier: "RxDemos")
         }
         
-        cell?.textLabel?.text = titles[indexPath.row]
+        cell?.textLabel?.text = titles[(indexPath as NSIndexPath).row]
         
         return cell!
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         
-        if titles[indexPath.row] == "Caculator" {
-            let target = storyboard?.instantiateViewControllerWithIdentifier("CaculatorViewController")
+        if titles[(indexPath as NSIndexPath).row] == "Caculator" {
+            let target = storyboard?.instantiateViewController(withIdentifier: "CaculatorViewController")
             self.navigationController?.pushViewController(target!, animated: true)
         }
     }

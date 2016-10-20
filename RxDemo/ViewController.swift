@@ -26,11 +26,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         tableView.delegate = self
         tableView.dataSource = self
-        
-        _ = Observable<Int>
-            .timer(0.1, period: 0.1, scheduler: MainScheduler.instance)
-            .take(10)
-            .subscribe(onNext: { print("timer:\($0)") })
     }
 
     // MARK: table view delegate and datasource

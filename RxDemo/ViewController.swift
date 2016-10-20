@@ -22,6 +22,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         title = "RxDemos"
         
         titles.append("Caculator")
+        titles.append("Login")
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -52,10 +53,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        if titles[(indexPath as NSIndexPath).row] == "Caculator" {
-            let target = storyboard?.instantiateViewController(withIdentifier: "CaculatorViewController")
-            self.navigationController?.pushViewController(target!, animated: true)
+        var target: UIViewController?
+        let title = titles[indexPath.row]
+        
+        if title == "Caculator" {
+            target = storyboard?.instantiateViewController(withIdentifier: "CaculatorViewController")
         }
+        else if title == "Login" {
+            target = storyboard?.instantiateViewController(withIdentifier: "LoginViewController")
+        }
+        
+        guard let viewcontroller = target else {
+            return
+        }
+        
+        self.navigationController?.pushViewController(viewcontroller, animated: true)
     }
 
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA979C271DB89EE4000B5C58 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA979C261DB89EE4000B5C58 /* LoginViewController.swift */; };
 		DAAD61D01D70604400CC8648 /* CaculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAD61CF1D70604400CC8648 /* CaculatorViewController.swift */; };
 		DACB99AB1D7055EA00C40373 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACB99AA1D7055EA00C40373 /* AppDelegate.swift */; };
 		DACB99AD1D7055EA00C40373 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACB99AC1D7055EA00C40373 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 		3B8259B124CC3037B1EC01F3 /* Pods-RxDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxDemo/Pods-RxDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		5015636C7DA8AAB2E617BA4C /* Pods_RxDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F5DEE4F1A7017265FF93E8 /* Pods-RxDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxDemo/Pods-RxDemo.release.xcconfig"; sourceTree = "<group>"; };
+		DA979C261DB89EE4000B5C58 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DAAD61CF1D70604400CC8648 /* CaculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaculatorViewController.swift; sourceTree = "<group>"; };
 		DACB99A71D7055EA00C40373 /* RxDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACB99AA1D7055EA00C40373 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				DACB99B31D7055EA00C40373 /* LaunchScreen.storyboard */,
 				DACB99B61D7055EA00C40373 /* Info.plist */,
 				DAAD61CF1D70604400CC8648 /* CaculatorViewController.swift */,
+				DA979C261DB89EE4000B5C58 /* LoginViewController.swift */,
 			);
 			path = RxDemo;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA979C271DB89EE4000B5C58 /* LoginViewController.swift in Sources */,
 				DAAD61D01D70604400CC8648 /* CaculatorViewController.swift in Sources */,
 				DACB99AD1D7055EA00C40373 /* ViewController.swift in Sources */,
 				DACB99AB1D7055EA00C40373 /* AppDelegate.swift in Sources */,

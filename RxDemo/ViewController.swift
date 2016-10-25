@@ -23,6 +23,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         titles.append("Caculator")
         titles.append("Login")
+        titles.append("Search")
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -56,6 +57,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         else if title == "Login" {
             target = storyboard?.instantiateViewController(withIdentifier: "LoginViewController")
+        }
+        else if title == "Search" {
+            target = storyboard?.instantiateViewController(withIdentifier: "SearchViewController")
         }
         
         guard let viewcontroller = target else {

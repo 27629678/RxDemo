@@ -209,6 +209,71 @@
             </objects>
             <point key="canvasLocation" x="1212" y="91.304347826086968"/>
         </scene>
+        <!--Search View Controller-->
+        <scene sceneID="i5g-Wd-E0H">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" id="dsc-um-l3d" customClass="SearchViewController" customModule="RxDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5pe-JK-zGe"/>
+                        <viewControllerLayoutGuide type="bottom" id="FHB-4P-Yr5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4U5-ZL-uJx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input Search Keyword" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HaY-wD-Fd3">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thrrotle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DjQ-hm-LPq">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="DLa-51-Mfq"/>
+                                    <constraint firstAttribute="width" constant="76" id="o9Z-a9-7Dd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nFl-2e-Icw">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="NcZ-BV-L1L"/>
+                                    <constraint firstAttribute="height" constant="31" id="Oxa-dA-xmc"/>
+                                </constraints>
+                            </switch>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WnC-EB-TqA">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="WnC-EB-TqA" secondAttribute="leading" id="0iY-Ba-Qte"/>
+                            <constraint firstItem="WnC-EB-TqA" firstAttribute="top" secondItem="nFl-2e-Icw" secondAttribute="bottom" constant="8" id="ATB-VV-6gi"/>
+                            <constraint firstItem="FHB-4P-Yr5" firstAttribute="top" secondItem="WnC-EB-TqA" secondAttribute="bottom" constant="20" id="CfZ-cr-pBi"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="DjQ-hm-LPq" secondAttribute="leading" id="Fm7-hk-ZFZ"/>
+                            <constraint firstItem="nFl-2e-Icw" firstAttribute="top" secondItem="HaY-wD-Fd3" secondAttribute="bottom" constant="22" id="HCF-S4-RPe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WnC-EB-TqA" secondAttribute="trailing" id="KcV-n5-ueB"/>
+                            <constraint firstItem="HaY-wD-Fd3" firstAttribute="top" secondItem="5pe-JK-zGe" secondAttribute="bottom" constant="31" id="bB2-hW-diN"/>
+                            <constraint firstItem="DjQ-hm-LPq" firstAttribute="top" secondItem="HaY-wD-Fd3" secondAttribute="bottom" constant="27" id="s49-FT-MFB"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="HaY-wD-Fd3" secondAttribute="leading" id="t0n-v6-f7c"/>
+                            <constraint firstItem="nFl-2e-Icw" firstAttribute="leading" secondItem="DjQ-hm-LPq" secondAttribute="trailing" constant="8" id="tpT-Yy-sEa"/>
+                            <constraint firstItem="HaY-wD-Fd3" firstAttribute="centerX" secondItem="4U5-ZL-uJx" secondAttribute="centerX" id="wpm-4E-jy8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HaY-wD-Fd3" secondAttribute="trailing" id="xC0-9T-PyE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="input" destination="HaY-wD-Fd3" id="phl-Nm-4FK"/>
+                        <outlet property="switch" destination="nFl-2e-Icw" id="S0T-ue-9jq"/>
+                        <outlet property="textView" destination="WnC-EB-TqA" id="JMs-gx-f8O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xob-qK-ozW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1957.5999999999999" y="90.404797601199405"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="EDM-WY-ou5">
             <objects>

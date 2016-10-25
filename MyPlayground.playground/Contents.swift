@@ -3,21 +3,39 @@
 import UIKit
 import RxSwift
 
-var str = "Hello, playground"
+var array: [String] = ["1", "2", "three", "4", "//5//"]
 
-let disposeBag = DisposeBag()
-
-let subject = PublishSubject<String>()
-let subject2 = PublishSubject<String>()
-
-Observable.of(subject, subject2).merge().subscribe({ print("A:\($0.element)") })
-Observable.of(subject, subject2).switchLatest().subscribe({ print("B:\($0.element)") })
-
-Observable.zip(subject, subject2) { $0 + $1 }.subscribe { (event) in
-    print("C:\(event.element)")
+let list0: [Int?] = array.map { (item) -> Int? in
+    return Int(item)
 }
-Observable.combineLatest(subject, subject2) { $0 + $1 }.subscribe({ print("D:\($0)") })
+print(list0)
 
-subject.onNext("a")
-subject.onNext("c")
-subject2.onNext("b")
+print(array.map { Int($0) })
+
+print(array.flatMap { Int($0) })
+
+print(array.flatMap ({ (item) -> Int? in
+    return Int(item)
+}))
+
+let list1: [Int?] = array.flatMap { Int($0) }
+print(list1)
+
+let list2: [Int?] = array.flatMap({ (item) -> Int? in
+    return Int(item)
+})
+print(list2)
+
+func myPrint(_ item: String)
+{
+    print("T:\(type(of:item)), V:\(item)")
+}
+
+let a: String? = nil
+
+a.map(myPrint)
+a.flatMap(myPrint)
+
+let 名字: String = "name"
+
+print(名字)

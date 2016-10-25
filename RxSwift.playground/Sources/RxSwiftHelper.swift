@@ -7,7 +7,7 @@ public func run(_ description: String, action: () -> Void)
     action()
 }
 
-public func delay(_ interval: TimeInterval, action: @escaping () -> Void)
+private func delay(_ interval: TimeInterval, action: @escaping () -> Void)
 {
     let delayTime = DispatchTime.now() + DispatchTimeInterval.seconds(Int(interval))
     DispatchQueue.main.asyncAfter(deadline: delayTime) { action() }
@@ -25,6 +25,14 @@ public func stopRun()
 
 public func run(_ until: TimeInterval)
 {
+    run(until, action: {})
+}
+
+public func run(_ until: TimeInterval, action: @escaping () -> Void)
+{
     runInfinite()
-    delay(until) { stopRun() }
+    delay(until) { 
+        action()
+        stopRun()
+    }
 }

@@ -25,6 +25,8 @@ class LoginViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        title = "Login"
+        
         Observable
             .combineLatest(username.rx.text, password.rx.text) { (username, password) -> Bool in
                 return username.characters.count > 4 && password.characters.count > 5

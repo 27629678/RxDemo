@@ -25,6 +25,8 @@ class SearchViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        title = "Search"
+        
         // bind switch action
         `switch`.rx.value
             .subscribe(onNext: { [weak self] in self?.switchBtnAction(isOn: $0)} )
@@ -37,13 +39,13 @@ class SearchViewController: UIViewController {
         myDisposable?.dispose()
         
         if isOn {
-            textView.text.append("throttle")
+            textView.text.append("Throttle")
             myDisposable = input.rx.text
                 .throttle(1, scheduler: MainScheduler.instance)
                 .subscribe(onNext: { [weak self] in self?.handle($0) })
         }
         else {
-            textView.text.append("debounce")
+            textView.text.append("Debounce")
             myDisposable = input.rx.text
                 .debounce(1, scheduler: MainScheduler.instance)
                 .subscribe(onNext: { [weak self] in self?.handle($0) })
@@ -53,6 +55,10 @@ class SearchViewController: UIViewController {
     }
     
     func handle(_ keyword: String?) {
-        textView.text.append("\n"+String(Int(Date().timeIntervalSince1970))+":"+keyword!)
+        guard let text = keyword, text.characters.count > 0 else {
+            return
+        }
+        
+        textView.text.append("\n" + String(Int(Date().timeIntervalSince1970)) + "\t:" + text)
     }
 }

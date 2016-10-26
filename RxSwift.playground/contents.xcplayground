@@ -5,6 +5,7 @@
         <page name='Creating'/>
         <page name='Transforming'/>
         <page name='Filtering'/>
-        <page name='Subscribing-Unsubscribing'/>
+        <page name='Combining'/>
+        <page name='ErrorHandling'/>
     </pages>
 </playground>

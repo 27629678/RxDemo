@@ -1,4 +1,4 @@
-//: [Previous](@previous)
+//: [Combining](@previous)
 
 import Foundation
 

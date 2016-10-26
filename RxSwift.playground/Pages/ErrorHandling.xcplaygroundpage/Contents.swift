@@ -75,4 +75,4 @@ run("Retry") {
         .addDisposableTo(disposeBag)
 }
 
-//:>注意Retry与Catch同时使用有副作用，同时要与Try、Catch的作用区分开
+//:>注意Retry与Catch同时使用有副作用，比如，不可以多次Retry；同时要与Try、Catch的作用区分开

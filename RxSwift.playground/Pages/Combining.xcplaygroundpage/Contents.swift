@@ -127,6 +127,10 @@ run("Switch") {
     })
 }
 
+delay(5) { 
+    stopRun()
+}
+
 //:>与图片描述不符，未验证其实现方法
 
 //: [ErrorHandling](@next)

@@ -1,6 +1,7 @@
 //: [About](@previous)
 
 import RxSwift
+import Foundation
 
 let disposeBag = DisposeBag()
 

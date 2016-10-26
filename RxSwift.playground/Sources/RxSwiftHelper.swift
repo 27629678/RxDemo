@@ -1,7 +1,7 @@
 import Foundation
 import PlaygroundSupport
 
-private func delay(_ interval: TimeInterval, action: @escaping () -> Void)
+public func delay(_ interval: TimeInterval, action: @escaping () -> Void)
 {
     let delayTime = DispatchTime.now() + DispatchTimeInterval.seconds(Int(interval))
     DispatchQueue.main.asyncAfter(deadline: delayTime) { action() }

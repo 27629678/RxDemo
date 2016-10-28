@@ -1,4 +1,4 @@
-//: [Combining](@previous)
+//: [Previous Chapter: Combining](@previous)
 
 import RxSwift
 import Foundation

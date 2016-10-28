@@ -1,4 +1,4 @@
-//: [About](@previous)
+//: [Previous Chapter: About](@previous)
 
 import RxSwift
 import Foundation
@@ -20,7 +20,7 @@ run("Create") {
         }
     }
     
-    source
+    let disposable = source
         .subscribe(
             onNext: { (number) in
                 print(number)
@@ -35,14 +35,17 @@ run("Create") {
                 print("disposed")
         })
     
-    source
+    let disposable1 = source
         .subscribe({ (event) in
             guard let element = event.element else {
                 return
             }
             
-            print(event)
+            print("Event:\(event), Element:\(element)")
         })
+    
+    print(disposable)
+    print(disposable1)
 }
 
 //:> AnonymousDisposable{} 与 onDisposed:{}不同
@@ -73,7 +76,7 @@ run("Defered") {
         .subscribe(onNext: { print($0) })
 }
 
-//:>每次有新的观察者订阅后都会得到全部的Observable Sequences
+//:>与Create不同的是，每次有新的观察者订阅后都会得到全部的Observable Sequences
 
 //:![Create](RxSwift_Empty.png)
 
@@ -170,4 +173,4 @@ run("Timer", duration: 10) {
         .addDisposableTo(disposeBag)
 }
 
-//: [Transforming](@next)
+//: [Next Chapter: Transforming](@next)

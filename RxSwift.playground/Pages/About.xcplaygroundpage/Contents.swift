@@ -10,4 +10,4 @@
  
  */
 
-//: [Creating](@next)
+//: [Next Chapter: Creating](@next)

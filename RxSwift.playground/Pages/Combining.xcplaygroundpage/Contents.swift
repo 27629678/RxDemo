@@ -1,4 +1,4 @@
-//: [Filtering](@previous)
+//: [Previous Chapter: Filtering](@previous)
 
 import RxSwift
 import Foundation
@@ -133,4 +133,4 @@ delay(5) {
 
 //:>与图片描述不符，未验证其实现方法
 
-//: [ErrorHandling](@next)
+//: [Next Chapter: ErrorHandling](@next)

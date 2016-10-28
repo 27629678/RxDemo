@@ -1,4 +1,4 @@
-//: [Creating](@previous)
+//: [Previous Chapter: Creating](@previous)
 
 import RxSwift
 import Foundation
@@ -88,4 +88,4 @@ run("Window") {
 
 //:>还没有找到使用场景，可能与分组处理有关；注意与**Buffer**的区别
 
-//: [Filtering](@next)
+//: [Next Chapter: Filtering](@next)

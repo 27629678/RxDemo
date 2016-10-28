@@ -1,4 +1,4 @@
-//: [Transforming](@previous)
+//: [Previous Chapter: Transforming](@previous)
 
 import RxSwift
 import Foundation
@@ -216,4 +216,4 @@ delay(5) {
     stopRun()
 }
 
-//: [Combining](@next)
+//: [Next Chapter: Combining](@next)
